@@ -1,0 +1,57 @@
+/* Section Builder v3 — Pattern-based + Global Header/Footer */
+
+/* ============================================================
+   Page Layout — 1440px desktop, responsive padding
+   ============================================================ */
+
+.sb-page {
+    margin: 0;
+    padding: 0;
+}
+
+.sb-main {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding-left: 40px;
+    padding-right: 40px;
+    min-height: 50vh;
+    box-sizing: border-box;
+}
+
+/* Header/Footer — full width (no max-width constraint) */
+.sb-header { width: 100%; }
+.sb-footer { width: 100%; }
+.sb-global-header, .sb-global-footer { width: 100%; }
+
+/* Sections inside main */
+.sb-section { position: relative; }
+.sb-pattern { width: 100%; }
+
+/* ============================================================
+   Responsive
+   ============================================================ */
+
+/* Tablet: 768px–1024px → padding 24px */
+@media (max-width: 1024px) {
+    .sb-main {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+}
+
+/* Mobile: <768px → padding 16px */
+@media (max-width: 767px) {
+    .sb-main {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
+
+/* Preview mode */
+.sb-preview { background: #fff; }
+
+/* Responsive visibility */
+@media (min-width: 1025px) { .sb-hide-desktop { display: none !important; } }
+@media (min-width: 768px) and (max-width: 1024px) { .sb-hide-tablet { display: none !important; } }
+@media (max-width: 767px) { .sb-hide-mobile { display: none !important; } }
